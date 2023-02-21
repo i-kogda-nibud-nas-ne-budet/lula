@@ -1,6 +1,7 @@
 from play import*
 from gamelishka_LVl2 import*
 from gamelishka_LVL3 import*
+from gamelishka_LVL4 import*
 #0 пустатаа 1 это границы 2 розовая квака 3 финиш +_+
 level='''
 111111111111
@@ -82,8 +83,8 @@ def game():
             i.x=1000
             i.update()
         spurits.clear()
-        LVL3()
-        
+        LVL2()
+       
     #    new_text('люлюлюлюлюлюлюлю,ты...... прошел уроввень')
     if key_is_pressed('s'):
         for luli in range(12):  

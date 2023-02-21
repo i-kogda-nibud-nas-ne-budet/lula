@@ -1,21 +1,17 @@
 from play import*
-from gamelishka_LVL3 import*
-def LVL2():
-
+def LVL4():
     #0 это границы 1 пустатаааа 2 розовая квака 3 финиш +_+
     level='''
-111111111111
-100100000021
-101000000001
-100000000001
-100001000001
-101000000001
-100000100001
-100010000001
-100000010011
-110000000001
-100031000001
-111111111111
+0100000010010
+0000000100000
+0000000000001
+0000100000000
+0000000000100
+0000000000010
+0000000000001
+0000000001000
+0000100000010
+1000000001000
 '''
     class Lalka():
         def __init__(self,color,x,y,width,height,border_color,border_width,transperency,rank):
@@ -75,13 +71,7 @@ def LVL2():
     @repeat_forever
     def game():
         if vanish.x==plueer.x and vanish.y==plueer.y:
-            for i in spurits:
-                i.x=1000
-                i.update()
-            spurits.clear()
-
-            LVL3()
-
+           new_text('люлюлюлюлюлюлюлю,ты...... прошел уроввень')
         if key_is_pressed('s'):
            for luli in range(12):  
                for i in pustataa:

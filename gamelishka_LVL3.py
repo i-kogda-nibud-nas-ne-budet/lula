@@ -1,4 +1,5 @@
 from play import*
+from gamelishka_LVL4 import*
 def LVL3():
     #0 это границы 1 пустатаааа 2 розовая квака 3 финиш +_+
     level='''
@@ -6,7 +7,7 @@ def LVL3():
 100010000001
 110000001111
 100000010001
-101000000011
+100000000011
 130000000000
 100000000000
 101000100001
@@ -50,6 +51,7 @@ def LVL3():
     xx=-500
     yy=535
     granizz=list()
+    spurits=list()
     pustataa=list()
     wh=int(1000/12)
     for i in level:
@@ -71,27 +73,32 @@ def LVL3():
         xx+=wh
     @repeat_forever
     def game():
-       if vanish.x==plueer.x and vanish.y==plueer.y:
-           new_text('люлюлюлюлюлюлюлю,ты...... прошел уроввень')
-       if key_is_pressed('s'):
+        if vanish.x==plueer.x and vanish.y==plueer.y:
+            for i in spurits:
+                i.x=1000
+                i.update()
+            spurits.clear()
+            LVL4()
+
+        if key_is_pressed('s'):
            for luli in range(12):  
                for i in pustataa:
                    plueer.muvdown(i)
                    i.update()
                    plueer.update()
-       if key_is_pressed('a'):
+        if key_is_pressed('a'):
            for luli in range(12):
                for i in pustataa:
                    plueer.muvleft(i)
                    i.update()
                    plueer.update()
-       if key_is_pressed('w'):
+        if key_is_pressed('w'):
            for luli in range(12):
                for i in pustataa:
                    plueer.muvup(i)
                    i.update()
                    plueer.update()
-       if key_is_pressed('d'):
+        if key_is_pressed('d'):
            for luli in range(12):
                for i in pustataa:
                    plueer.muvright(i)
